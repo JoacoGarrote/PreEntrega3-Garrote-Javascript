@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SaludAR | Personal</title>
+    <!-- FUENTES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Eczar:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- BOOTSTRAP -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <!-------- Header -------->
+    <header>
+      <div class="menu-header">
+        <div>
+          <a class="menu-logo-link" href="../index.html"
+            >Salud<b class="b-logo"> + </b>AR</a
+          >
+        </div>
+        <ul class="menu-atajos">
+          <!-- <li>
+            <a class="menu-atajos-turnos" href="turnos.html">Ver mis turnos</a>
+          </li> -->
+          <li>
+            <a class="menu-atajos-personal" href="personal.html"
+              >Ingresar como personal</a
+            >
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <!-------- Formulario para agregar un medico/a -------->
+
+    <h1>---------- Agregar esto para la entrega final-----------</h1>
+    <section class="seccion-formMedico">
+      <form id="formulario-medico" class="formulario-medico">
+        <label for="nombre">Nombre del médico/a:</label>
+        <input type="text" name="nombre" id="nombre" />
+        <label for="especialidad">Especialidad:</label>
+        <select name="especialidad" id="especialidad">
+          <option value="medicina-general">Medicina General</option>
+          <option value="pediatria">Pediatria</option>
+          <option value="cardiologia">Cardiologia</option>
+          <option value="ginecologia">Ginecologia</option>
+          <option value="medicina-familiar">Medicina Familiar</option>
+          <option value="ortopedia">Ortopedia</option>
+          <option value="psiquiatria">Psiquiatria</option>
+          <option value="dermatologia">Dermatologia</option>
+        </select>
+        <label for="plan">Plan de salud:</label>
+        <select name="plan" id="plan">
+          <option value="osde">OSDE</option>
+          <option value="swiss-medical">Swiss Medical</option>
+          <option value="galeno">Galeno</option>
+          <option value="medicus">Medicus</option>
+          <option value="sancor-seguros">Grupo Sancor Seguros</option>
+          <option value="omint">OMINT</option>
+        </select>
+        <label for="plan">Franja horaria:</label>
+        <select name="horario" id="horario">
+          <option value="horario1">De 8:00 a 12:00</option>
+          <option value="horario2">De 12:00 a 16:00</option>
+          <option value="horario3">De 16:00 a 20:00</option>
+        </select>
+        <input
+          type="submit"
+          id="formMedicoSubmitBtn"
+          value="Subir perfil a la base de datos"
+        />
+      </form>
+    </section>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>

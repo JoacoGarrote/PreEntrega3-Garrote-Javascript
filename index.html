@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SaludAR | Main</title>
+    <!-- FUENTES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Eczar:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- BOOTSTRAP -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <!----------- BODY ----------->
+
+  <body>
+    <!-------- Header -------->
+    <header>
+      <div class="menu-header">
+        <div>
+          <a class="menu-logo-link" href="">Salud<b class="b-logo"> + </b>AR</a>
+        </div>
+        <ul class="menu-atajos">
+          <!-- <li>
+            <a class="menu-atajos-turnos" href="./pages/turnos.html"
+              >Ver mis turnos</a
+            >
+          </li> -->
+          <li>
+            <a class="menu-atajos-personal" href="./pages/personal.html"
+              >Ingresar como personal</a
+            >
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <!-------- Hero principal -------->
+    <section class="seccion-principal-hero">
+      <div class="container-fluid sp-hero">
+        <h1 class="h1-hero">Estamos <b class="h1-hero-b">para</b> SaludAR</h1>
+        <p class="p-hero">
+          Descubrí una atención médica de calidad y encontrá especialistas
+          confiables. En SaludAR, cuidamos tu bienestar en cada paso del camino.
+        </p>
+      </div>
+    </section>
+
+    <!-------- Cards (PROX) -------->
+    <section class="seccion-cartas">
+      <div class="card">
+        <div class="icon-card"></div>
+        <div class="h3-card"></div>
+        <div class="p-card"></div>
+      </div>
+      <div class="card">
+        <div class="icon-card"></div>
+        <div class="h3-card"></div>
+        <div class="p-card"></div>
+      </div>
+      <div class="card">
+        <div class="icon-card"></div>
+        <div class="h3-card"></div>
+        <div class="p-card"></div>
+      </div>
+    </section>
+
+    <!-------- Mostrador de turnos -------->
+
+    <section class="seccion-turnos">
+      <h2 class="h2-turnos">Turnos disponibles:</h2>
+      <div class="medicos-indicador">
+        <p>
+          En la siguiente sección se ordenan los médicos por: nombre y apellido,
+          especialidad, plan de salud y franja horaria:
+        </p>
+      </div>
+      <div
+        id="container-medicos-disponibles"
+        class="container-medicos-disponibles"
+      >
+        <!-- COMPLETAR CON JAVA -->
+        <div class="medicos-disponibles"></div>
+      </div>
+    </section>
+
+    <!-- Esta seccion iria en turnos agendados, no logré pasar los datos a turnos.html -->
+    <section class="seccion-turnos-agendados">
+      <h2 class="h2-turnos">Turnos agendados:</h2>
+      <div class="medicos-indicador">
+        <p>
+          En la siguiente sección se muestran los turnos agregados previamente:
+        </p>
+        <div id="container-turnos-agendados" class="container-turnos-agendados">
+          <!-- Java -->
+          <div class="medicos-disponibles"></div>
+        </div>
+        <div
+          id="container-confirmacion"
+          class="container-confirmacion disabled"
+        >
+          <div>
+            <h4 class="h4-confirmacion">
+              ¡El listado de turnos ha sido confirmado con éxito!
+            </h4>
+          </div>
+        </div>
+        <div class="div-botones-turnos">
+          <button id="btnVaciar" class="btn-vaciar-turnos">
+            Vaciar turnos
+          </button>
+          <button
+            onclick="confirmarTurno()"
+            id="btnConfirmar"
+            class="btn-confirmar-turnos"
+          >
+            Confirmar turnos
+          </button>
+        </div>
+        <!-- Confirmacion Pop Up -->
+      </div>
+    </section>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,258 @@
+/* PALETA DE COLORES */
+:root {
+  --clr-link: rgb(105, 176, 179);
+  --clr-darkblue: rgb(82, 94, 128);
+  --clr-red: rgb(226, 6, 6);
+  --clr-argentina: rgb(117, 170, 219);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Eczar", serif;
+}
+
+.disabled {
+  display: none;
+}
+
+h3 {
+  font-size: 1.3rem;
+}
+
+/* HEADER */
+header {
+  background-color: var(--clr-link);
+  background-image: linear-gradient(62deg, cadetblue 0%, white 100%);
+  padding: 2rem;
+}
+
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-logo-link {
+  display: flex;
+  color: var(--clr-darkblue);
+  text-decoration: none;
+  font-size: 1.5em;
+  text-align: center;
+  gap: 5px;
+}
+.menu-logo-link:hover {
+  color: rgba(253, 254, 255, 0.774);
+  transition: 250ms;
+}
+.b-logo {
+  color: var(--clr-red);
+}
+
+.menu-atajos {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  margin-bottom: 0;
+  gap: 3rem;
+}
+
+.menu-atajos li a {
+  text-decoration: none;
+  margin-top: 2rem;
+}
+
+.menu-atajos-turnos {
+  position: relative;
+  padding: 0.6rem;
+  color: var(--clr-darkblue);
+}
+.menu-atajos-personal {
+  position: relative;
+  padding: 0.6rem;
+  color: rgba(19, 5, 2, 0.397);
+}
+
+/* Hover de los links */
+
+.menu-atajos-turnos::before,
+.menu-atajos-personal::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: var(--clr-link);
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.menu-atajos-turnos:hover::before,
+.menu-atajos-personal:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+/* ------------- Seccion principal ------------- */
+/* Hero */
+.seccion-principal-hero {
+  background: url(../img/banner-principal.jpg) center/cover;
+  display: flex;
+  height: auto;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem;
+}
+
+.sp-hero {
+  text-align: center;
+  margin: auto;
+  padding: 5rem;
+}
+.h1-hero {
+  font-size: 3rem;
+  border-radius: 30px;
+  text-align: center;
+  margin: auto;
+  text-shadow: 1px 1px 0 white;
+}
+.h1-hero-b {
+  color: var(--clr-red);
+}
+.p-hero {
+  font-size: 1.3rem;
+  margin-top: 4rem;
+  text-shadow: 1px 1px 0 white;
+}
+
+/*------------- Formulario -------------*/
+
+.seccion-formMedico {
+  padding: 2rem;
+  padding-top: 3rem;
+  background-color: rgba(95, 158, 160, 0.445);
+}
+.formulario-medico {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding: 2rem;
+  border: 1rem solid white;
+  border-radius: 40px;
+  gap: 10px;
+}
+.h2-formulario {
+  text-align: center;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+label {
+  font-size: 1.25rem;
+  text-decoration: underline;
+}
+input,
+select {
+  border: none;
+  padding: 0.3rem;
+  border-radius: 40px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+}
+
+/*------------- Cards -------------*/
+
+/*------------- Turnos -------------*/
+
+.seccion-turnos,
+.seccion-turnos-agendados {
+  padding: 2rem;
+  padding-top: 3rem;
+  background-color: rgba(95, 158, 160, 0.445);
+}
+.h2-turnos {
+  font-size: 3.25rem;
+}
+.container-medicos-disponibles,
+.container-turnos-agendados {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  background-color: rgba(128, 128, 128, 0.877);
+  border: 1rem solid var(--clr-argentina);
+  border-radius: 40px;
+  gap: 1.3rem;
+  overflow-y: scroll;
+  height: 30rem;
+}
+.medicos-disponibles {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.medicos-js-main,
+.medicos-js-turnos {
+  width: 100%;
+  gap: 2rem;
+  display: grid;
+  grid-template-columns: 0.25fr 1fr 1fr 1fr 1fr 1fr;
+  background-color: whitesmoke;
+  border-radius: 10px;
+}
+.medicos-foto {
+  max-width: 4rem;
+}
+.medico-agregar-btn,
+.medico-remover-btn {
+  padding: 0.6rem;
+  border: 4px solid black;
+  border-radius: 100vmax;
+}
+.medico-agregar-btn:hover,
+.medico-remover-btn:hover {
+  background-color: rgba(197, 141, 19, 0.418);
+  transition: 0.5s;
+}
+.var-color-js {
+  background-color: rgba(178, 182, 182, 0.445);
+}
+
+.div-botones-turnos {
+  padding-top: 0.8rem;
+  display: flex;
+  justify-content: space-around;
+}
+.btn-confirmar-turnos {
+  padding: 1.25rem;
+  border-style: none;
+  border-radius: 40px;
+  transition: 0.2s;
+}
+.btn-confirmar-turnos:hover {
+  background-color: rgba(51, 255, 0, 0.747);
+}
+.btn-vaciar-turnos {
+  padding: 1.25rem;
+  border-style: none;
+  border-radius: 40px;
+  background-color: rgba(255, 0, 0, 0.336);
+  transition: 0.2s;
+}
+.btn-vaciar-turnos:hover {
+  background-color: rgb(255, 0, 0);
+  color: white;
+}
+
+.h4-confirmacion {
+  text-align: center;
+  margin-top: 2rem;
+  border-style: double;
+  border-radius: 30px;
+  padding: 2rem;
+  color: green;
+}
